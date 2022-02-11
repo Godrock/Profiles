@@ -96,4 +96,4 @@ DOMAIN,play.charontv.com
 DOMAIN,embyclub.com
 
 # > MisakaF服务器
-DOMAIN, emby.misakaf.xyz
+DOMAIN,emby.misakaf.xyz
