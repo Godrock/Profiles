@@ -94,3 +94,6 @@ DOMAIN,play.charontv.com
 
 # > 熊猫影业服务器
 DOMAIN,embyclub.com
+
+# > MisakaF服务器
+DOMAIN, emby.misakaf.xyz
