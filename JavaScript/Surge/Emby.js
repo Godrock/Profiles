@@ -77,10 +77,11 @@ DOMAIN,servers.xeton.dev
 DOMAIN,embyserver.ga
 
 # > 流媒体卷毛鼠服务器
+DOMAIN,cf.jmsooo.com
 DOMAIN,sg1.jmsooo.com
 DOMAIN,sg2.jmsooo.com
-DOMAIN,v6sg.jmsooo.com
-DOMAIN,v6sg.jmsooo.com
+DOMAIN,usa1.jmsooo.com
+DOMAIN,usa2.jmsooo.com
 
 # > Odyssey+服务器
 DOMAIN,cf.odysseyplus.site
