@@ -1,5 +1,5 @@
 #!name=TikTok JP
-#!desc=TikTok Unlock
+#!desc=TikTok
 
 [URL Rewrite]
 (?<=_region=)CN(?=&) JP 307
