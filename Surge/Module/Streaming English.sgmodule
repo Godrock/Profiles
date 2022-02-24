@@ -1,0 +1,9 @@
+[Script]
+Netflix Unlock Detection = type=generic,script-path=https://raw.githubusercontent.com/allen-miao/Surge-Panel/main/Netflix_Unlock_Detection_English.js,argument=title=Netflix Unlock Detection
+Disney+ Unlock Detection = type=generic,script-path=https://raw.githubusercontent.com/allen-miao/Surge-Panel/main/Disney%2B_Unlock_Detection_English_new.js
+YouTube Premium Unlock Detection = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/allen-miao/Surge-Panel/main/YouTube%20Premium%20Unlock%20Detection_English.js
+
+[Panel]
+Netflix Unlock Detection = script-name=Netflix Unlock Detection,title=Netflix Unlock Detection,content=Please refresh.,update-interval=1800
+Disney+ Unlock Detection = script-name=Disney+ Unlock Detection,title=Disney+ Unlock Detection,style=alert,content=Please refresh.,update-interval=1800
+YouTube Premium Unlock Detection = script-name=YouTube Premium Unlock Detection,title=YouTube Premium Unlock Detection,update-interval=1800
