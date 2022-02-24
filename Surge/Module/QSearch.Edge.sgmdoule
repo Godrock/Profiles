@@ -1,0 +1,64 @@
+#!name=Edge Search Add-ons
+#!desc=Edge浏览器 聚合搜索插件
+
+[URL Rewrite]
+
+# bd = 百度
+^https:\/\/duckduckgo.com\/\?q=bd(\+|%20)(.+) https://www.baidu.com/s?wd=$2 302
+
+# bi = 必应
+^https:\/\/duckduckgo.com\/\?q=bi(\+|%20)(.+) https://cn.bing.com/search?q=$2 302
+
+# ddg = Duckduckgo
+^https:\/\/duckduckgo.com\/\?q=ddg(\+|%20)(.+) https://duckduckgo.com/?ia=about&q=$2 302
+
+# gh = Github
+^https:\/\/duckduckgo.com\/\?q=gh(\+|%20)(.+) https://github.com/search?q=$2 302
+
+# db = 豆瓣
+^https:\/\/duckduckgo.com\/\?q=db(\+|%20)(.+) https://www.douban.com/search?q=$2 302
+
+# zh = 知乎
+^https:\/\/duckduckgo.com\/\?q=zh(\+|%20)(.+) https://www.zhihu.com/search?type=content&q=$2 302
+
+# wb = 微博
+^https:\/\/duckduckgo.com\/\?q=wb(\+|%20)(.+) https://s.weibo.com/weibo/$2 302
+
+# wx = 微信
+^https:\/\/duckduckgo.com\/\?q=wx(\+|%20)(.+) https://weixin.sogou.com/weixinwap?query=$2 302
+
+# tw = Twitter
+^https:\/\/duckduckgo.com\/\?q=tw(\+|%20)(.+) https://twitter.com/search?q=$2 302
+
+# zdm = 什么值得买
+^https:\/\/duckduckgo.com\/\?q=zdm(\+|%20)(.+) https://search.smzdm.com/?s=$2 302
+
+# wk = 维基中文
+^https:\/\/duckduckgo.com\/\?q=wk(\+|%20)(.+) https://zh.wikipedia.org/wiki/$2 302
+
+# wiki = 维基百科
+^https:\/\/duckduckgo.com\/\?q=wiki(\+|%20)(.+) http://wikipedia.org/wiki/$2 302
+
+# dyz = DeepL 译至中
+^https:\/\/duckduckgo.com\/\?q=dyz(\+|%20)(.+) https://www.deepl.com/translator#auto/zh/$2 302
+
+# dyy = DeepL 译至英
+^https:\/\/duckduckgo.com\/\?q=dyy(\+|%20)(.+) https://www.deepl.com/translator#auto/en/$2 302
+
+# gyz = Google 译至中
+^https:\/\/duckduckgo.com\/\?q=gyz(\+|%20)(.+) https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$2 302
+
+# gyy = Google 译至英
+^https:\/\/duckduckgo.com\/\?q=gyy(\+|%20)(.+) https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$2 302
+
+# ssp = 少数派 Google站内搜索
+^https:\/\/duckduckgo.com\/\?q=ssp(\+|%20)(.+) https://www.google.com/search?q=$2+site%3Asspai.com 302
+
+# gm = Google图片
+^https:\/\/duckduckgo.com\/\?q=gm(\+|%20)(.+) https://www.google.com/search?&tbm=isch&q=$2 302
+
+# 默认 Google
+^https:\/\/duckduckgo.com\/\?q=(.+) https://www.google.com/search?q=$1 302
+
+[MITM]
+hostname = %APPEND% duckduckgo.com
