@@ -37,26 +37,11 @@ DOMAIN,servers.xeton.dev
 DOMAIN,emby.otakudrive.life
 DOMAIN,emby2.otakudrive.life 
 
-# > 流媒体emby-jmsooo体验服
-DOMAIN,agahk1.jmsooo.com
-DOMAIN,agasg1.jmsooo.com
-DOMAIN,agajp1.jmsooo.com
-DOMAIN,aws.jmsooo.com
-DOMAIN,ntt1.jmsooo.com
-DOMAIN,hinet.jmsooo.com
-DOMAIN,cf1.jmsooo.com
-
 # > 流媒体pornemby服务器
 DOMAIN,pornemby.club
 
 # > 流媒体IMM服务器
 DOMAIN,emby.immtel.com
-
-# > 流媒体Odyssey服务器
-DOMAIN,cf.odysseyplus.site
-DOMAIN,agahk.odysseyplus.site
-DOMAIN,agasg.odysseyplus.site
-DOMAIN,ru.odysseyplus.site
 
 # > 流媒体Exflux服务器
 DOMAIN,line.emby.men
@@ -83,18 +68,20 @@ DOMAIN,sg2.jmsooo.com
 DOMAIN,usa1.jmsooo.com
 DOMAIN,usa2.jmsooo.com
 
-# > Odyssey+服务器
+# > 流媒体Odyssey服务器
 DOMAIN,cf.odysseyplus.site
 DOMAIN,sg.odysseyplus.site
-DOMAIN,sg2.odysseyplus.site
+DOMAIN,jp.odysseyplus.site
 DOMAIN,ru.odysseyplus.site
 DOMAIN,sp.odysseyplus.site
+DOMAIN,us.odysseyplus.site
+DOMAIN,kr.odysseyplus.site
 
-# > Charon  TV +服务器
+# > 流媒体Charon  TV +服务器
 DOMAIN,play.charontv.com
 
-# > 熊猫影业服务器
-DOMAIN,embyclub.com
+# > 流媒体熊猫影业服务器
+DOMAIN,emby.kim
 
-# > MisakaF服务器
+# > 流媒体MisakaF_Emby服务器
 DOMAIN,emby.misakaf.xyz
