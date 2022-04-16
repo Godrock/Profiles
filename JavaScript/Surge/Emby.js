@@ -18,3 +18,6 @@ DOMAIN,play.charontv.com
 
 # > 流媒体MisakaF服务器
 DOMAIN,emby.misakaf.xyz
+
+# > 流媒体Froghub服务器
+DOMAIN,178.173.230.58
