@@ -24,3 +24,4 @@ DOMAIN,178.173.230.58
 
 # > 流媒体黑山服务器
 DOMAIN,hs.gcx920110.com
+DOMAIN,sg.gcx920110.com
