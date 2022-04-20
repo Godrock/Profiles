@@ -26,23 +26,23 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       'icon-color': '#FF2D55',
     }
   let [{ region, status }] = await Promise.all([testDisneyPlus()])
-    await Promise.all([check_youtube_premium(),check_netflix()])
+    await Promise.all([check_netflix()])
       .then((result) => { 
          console.log(result)
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="Disney+: 即将登陆~"+region.toUpperCase()
+        disney_result="Disney+  ：待解锁~"+region.toUpperCase()
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="Disney+: 已解锁，区域: "+region.toUpperCase()
+        disney_result="Disney+  ：已解锁，区域："+region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
-        disney_result="Disney+: 未解锁 "
+        disney_result="Disney+  ：未支持 🚫 "
       } else if (status==STATUS_TIMEOUT) {
-        disney_result="Disney+: 检测超时 "
+        disney_result="Disney+  ：检测超时 🚦"
       }
 result.push(disney_result)
 console.log(result)
@@ -93,7 +93,7 @@ panel_result['content'] = content
     await inner_check()
       .then((code) => {
         if (code === 'Not Available') {
-          youtube_check_result += '未解锁'
+          youtube_check_result += '不支持解锁'
         } else {
           youtube_check_result += '已解锁，区域: ' + code.toUpperCase()
         }
@@ -104,6 +104,7 @@ panel_result['content'] = content
   
     return youtube_check_result
   }
+
 
   async function check_netflix() {
     let inner_check = (filmId) => {
@@ -144,14 +145,14 @@ panel_result['content'] = content
       })
     }
   
-    let netflix_check_result = 'Netflix: '
+    let netflix_check_result = 'Netflix     ：'
   
     await inner_check(81215567)
       .then((code) => {
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += '已解锁，区域: ' + code.toUpperCase()
+        netflix_check_result += '已解锁，区域：' + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
@@ -159,7 +160,7 @@ panel_result['content'] = content
           return Promise.reject('Not Available')
         }
   
-        netflix_check_result += '自制剧，区域: ' + code.toUpperCase()
+        netflix_check_result += '仅自制，区域：' + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .catch((error) => {
@@ -167,7 +168,7 @@ panel_result['content'] = content
           return
         }
         if (error === 'Not Available') {
-          netflix_check_result += '未解锁'
+          netflix_check_result += '不解锁'
           return
         }
         netflix_check_result += '检测失败，请刷新面板'
