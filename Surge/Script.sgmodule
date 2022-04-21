@@ -98,7 +98,7 @@ Web豆瓣电影和电视剧添加便捷播放按钮 = type=http-response,pattern
 //Spotify解锁 https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.module
 //Emby解锁 https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/emby-plugin.sgmodule
 //Siri区域解锁 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Siri_for_Proxy.sgmodule
-//空气质量 https://github.com/VirgilClyne/iRingo/blob/beta/sgmodule/Weather.beta.sgmodule?raw=true
+//空气质量 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Weather.sgmodule
 //ChangeUA https://raw.githubusercontent.com/zZPiglet/Task/master/ChangeUA.sgmodule
 //京东半自动销卡 https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/surge/Jd_unbindCard.sgmodule
 //Dualsub https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Dualsub.sgmodule
