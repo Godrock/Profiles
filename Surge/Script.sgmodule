@@ -50,8 +50,6 @@
 ^https?:\/\/(www\.)?google\.cn https://www.google.com/ncr 302
 
 [Script]
-# > TK去水印
-http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Tiktok.js, requires-body=true, timeout=10, tag=TK去水印
 # > 京东、淘宝App 历史价格 
 京东比价 = type=http-response, pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig), requires-body=1, script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/other/jd_tb_price.js
 淘宝比价request = type=http-request, pattern=^http://.+/amdc/mobileDispatch, requires-body=1, script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/other/jd_tb_price.js
