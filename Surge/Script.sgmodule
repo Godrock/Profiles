@@ -2,6 +2,10 @@
 #!desc=Update-2022.4.21
 #!system=ios
 
+[Rule]
+# > Safari 防跳转
+DOMAIN,app-site-association.cdn-apple.com,REJECT
+
 [URL Rewrite]
 # > TikTok换区
 # > (更换307前面JP JP=日本 KR=韩国 HK=香港 US=美国）
