@@ -88,14 +88,14 @@ panel_result['content'] = content
       })
     }
   
-    let youtube_check_result = 'YouTube  : '
+    let youtube_check_result = 'YouTube :'
   
     await inner_check()
       .then((code) => {
         if (code === 'Not Available') {
           youtube_check_result += '不支持解锁'
         } else {
-          youtube_check_result += '已解锁，区域:  ' + code.toUpperCase()
+          youtube_check_result += '已解锁，区域: ' + code.toUpperCase()
         }
       })
       .catch((error) => {
