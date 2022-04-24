@@ -20,7 +20,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
   ;(async () => {
     let panel_result = {
-      title: '𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈',
+      title: 'Streaming',
       content: '',
       icon: 'play.tv',
       'icon-color': '#55DB56',
@@ -32,17 +32,17 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="𝑫𝒊𝒔𝒏𝒆𝒚+待上线➟"+region.toUpperCase()
+        disney_result="Disney+待上线➟"+region.toUpperCase()
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="𝑫𝒊𝒔𝒏𝒆𝒚+  ➟  "+region.toUpperCase()
+        disney_result="Disney+  ➟  "+region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
-        disney_result="𝑫𝒊𝒔𝒏𝒆𝒚+  ➟  🚫 "
+        disney_result="Disney+  ➟  🚫 "
       } else if (status==STATUS_TIMEOUT) {
-        disney_result="𝑫𝒊𝒔𝒏𝒆𝒚+  ➟  ↻"
+        disney_result="Disney+  ➟  ↻"
       }
 result.push(disney_result)
 console.log(result)
@@ -96,7 +96,7 @@ panel_result['content'] = content
       })
     }
   
-    let netflix_check_result = '𝑵𝒆𝒕𝒇𝒍𝒊𝒙 '
+    let netflix_check_result = 'Netflix '
   
     await inner_check(81215567)
       .then((code) => {
