@@ -23,7 +23,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       title: 'Streaming',
       content: '',
       icon: 'play.tv',
-      'icon-color': '#55DB56',
+      'icon-color': '#55ba94',
     }
   let [{ region, status }] = await Promise.all([testDisneyPlus()])
     await Promise.all([check_netflix()])
