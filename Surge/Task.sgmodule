@@ -1,5 +1,5 @@
 #!name=定时脚本
-#!desc=Update-2022.4.3
+#!desc=Update-2022.4.28
 #!system=ios
 
 [Script]
@@ -11,9 +11,13 @@
 腾讯自选股 = type=cron,cronexp="10 0,16 * * *",wake-system=1,timeout=20,script-path=Script/txstock.js
 # > 小米运动
 小米运动 = type=cron,cronexp=0 0 17 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js,script-update-interval=0
+# > app价格+版本 监控
+软件监控 = type=cron,cronexp="0 30 8-22/2 * * *",script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/appstore/AppMonitor.js
 # > 什么值得买(签到+任务)
 值买签到 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,script-update-interval=0
 值买任务 = type=cron,cronexp=30 4 0 1 * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_mission.js,script-update-interval=0
+# > 慢慢买
+慢买签到 = type=cron,cronexp=0 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,script-update-interval=0
 # > 饿了么(任务+领豆)
 饿了领豆 = type=cron,cronexp=0 3 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.js
 饿了任务 = type=cron,cronexp=0 0 10 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_mission.js
@@ -35,7 +39,7 @@
 京东物流 = type=cron,cronexp=30 0 12 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu%20copy.js,script-update-interval=0,wake-system=1
 # > 新浪微博
 微博签到 = type=cron,cronexp="50 4,6,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/weibo.js,script-update-interval=0
-//微博推送= type=cron,cronexp="0 */30 9-21 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js,script-update-interval=0
+微博推送= type=cron,cronexp="0 */30 9-21 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js,script-update-interval=0
 # > 威锋论坛
 威锋论坛 = type=cron,cronexp=30 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.js,wake-system=1,script-update-interval=0
 # > 爱奇艺
