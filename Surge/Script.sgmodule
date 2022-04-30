@@ -1,19 +1,21 @@
 #!name=脚本合集
-#!desc=Update-2022.4.21
+#!desc=Update-2022.4.27
 #!system=ios
+
+[General]
+force-http-engine-hosts = %APPEND% boxjs.net, boxjs.com
 
 [Rule]
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
 
 [URL Rewrite]
-# > TikTok换区
+# > TikTok 换区
 # > (更换307前面JP JP=日本 KR=韩国 HK=香港 US=美国）
 (?<=&mcc_mnc=)4 2 307
 (?<=_region=)CN(?=&) JP 307
 (^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
 ^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
-
 # > Safari全能搜索
 # 以下为Safari全能搜索、需要把Safari的搜索引擎设置为：DuckDuckGo
 # gm (Google图片)
@@ -55,22 +57,23 @@ DOMAIN,app-site-association.cdn-apple.com,REJECT
 ^https?:\/\/(www\.)?google\.cn https://www.google.com/ncr 302
 
 [Script]
-# > 京东、淘宝App 历史价格 
-京东比价 = type=http-response, pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig), requires-body=1, script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/other/jd_tb_price.js
-淘宝比价request = type=http-request, pattern=^http://.+/amdc/mobileDispatch, requires-body=1, script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/other/jd_tb_price.js
-淘宝比价response = type=http-response, pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail, requires-body=1, script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/other/jd_tb_price.js
-# > http://boxjs.net
-Rewrite: BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js,requires-body=true,timeout=120
+# > 京东App 历史价格 
+京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
+# > Boxjs（稳定版+测试版）
+会话数据 = type=http-request,pattern=^https?:\/\/boxjs\.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
+会话数据 = type=http-request,pattern=^https?:\/\/boxjs\.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 # > https://sub-store
 Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
+# > 机场信息 
+机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info.js
 # > 新浪微博 去广告
 微博广告 = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js,type=http-response,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua)
 微博广告 = type=http-response,requires-body=1,max-size=-1,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
-# > 微信去除公众号文章底部广告
-微信去除公众号文章底部广告 = type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad,timeout=30,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
-# > bilbii换区、评分
+# > bilbii 换区、评分
 哔哩换区 = type=http-response,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/v\d\/search\/defaultwords)\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 哔哩搜索 = type=http-request,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+# > bilbii 大会员画质
+哔哩画质 = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=true,script-path=https://github.com/Sunert/Script/raw/master/Script/Bilibili/BiliHD.js
 # > 奈飞评分
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
@@ -89,8 +92,9 @@ Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https:/
 百度跳转 = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
 # > phothop 解锁
 ＰＳ修图 = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/photoshop.js,script-update-interval=0
-# > Web豆瓣添加便捷播放
-Web豆瓣电影和电视剧添加便捷播放按钮 = type=http-response,pattern=^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/Surge/main/JavaScript/DouBan.js
+# > 豆瓣电影 搜索 二选一
+豆瓣电影 = type=http-response,pattern=^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/DouBan.js
+//豆瓣电影 = type=http-response,pattern=^https://m.douban.com/movie/subject/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Neurogram-R/Surge/master/Douban.js
 # > 美图秀秀
 美图秀秀 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Mtxx.js,type=http-response,pattern=^https?://(api|h5).xiuxiu.meitu.com/(v1/user/show.json|v1/vip/vip_show.json|v1/vip/prompt/query.json|v1/h5/vip/sub_detail.json|v1/h5/user/self_show.json|v1/h5/vip/user_detail.json|v1/vip/prompt/query.json|v1/vip/prompt/query.json)
 
@@ -102,7 +106,8 @@ Web豆瓣电影和电视剧添加便捷播放按钮 = type=http-response,pattern
 //Emby解锁 https://raw.githubusercontent.com/rartv/EmbyPublic/test/surge/emby-plugin.sgmodule
 //Siri区域解锁 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Siri_for_Proxy.sgmodule
 //空气质量 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Weather.sgmodule
-//ChangeUA https://raw.githubusercontent.com/zZPiglet/Task/master/ChangeUA.sgmodule
+//百度知乎换UA https://raw.githubusercontent.com/zZPiglet/Task/master/ChangeUA.sgmodule
+//京东联盟转链 https://raw.githubusercontent.com/githubdulong/Script/master/Surge/jdapp_to_union.sgmodule
 //京东半自动销卡 https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/surge/Jd_unbindCard.sgmodule
 //Dualsub https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Dualsub.sgmodule
 //去广告 For iOS https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/Advertising.sgmodule
@@ -111,7 +116,9 @@ Web豆瓣电影和电视剧添加便捷播放按钮 = type=http-response,pattern
 //公共DNS https://github.com/VirgilClyne/GetSomeFries/blob/main/sgmodule/DNS.sgmodule?raw=true
 //AllInOne https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/AllInOne/AllInOne.sgmodule
 //高级设置URL重定向 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/General.sgmodule
+//微信链接限制 https://raw.githubusercontent.com/zZPiglet/Task/master/UnblockURLinWeChat.sgmodule
+//bilibili去广告 https://github.com/yuhangrao/Surge/raw/master/Module/Bilibili/bilibili_plus.sgmodule
 //模块更新捷径 https://www.icloud.com/shortcuts/67c3ace4fb3a4f9ebbe8d3184cd82e39
 
 [MITM]
-hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, trade-acs.m.taobao.com, sub.store, duckduckgo.com, *.bilibili.com, ap?.biliapi.net, mp.weixin.qq.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, ap*.intsig.net, pan.baidu.com, vsco.co, api.revenuecat.com, boxer.baidu.com, api.polaxiong.com, lcs-mobile-cops.adobe.io, biz.caiyunapp.com, *.google.cn, *.google.com.hk, m.douban.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com,
+hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, sub.store, duckduckgo.com, *.bilibili.com, ap?.biliapi.net, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, ap*.intsig.net, pan.baidu.com, vsco.co, api.revenuecat.com, boxer.baidu.com, api.polaxiong.com, lcs-mobile-cops.adobe.io, biz.caiyunapp.com, *.google.cn, *.google.com.hk, m.douban.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com,
