@@ -93,13 +93,13 @@ panel_result['content'] = content
     await inner_check()
       .then((code) => {
         if (code === 'Not Available') {
-          youtube_check_result += '不支持解锁'
+          youtube_check_result +=  '不支持解锁'
         } else {
-          youtube_check_result += '已解锁，区域:  ' + code.toUpperCase()
+          youtube_check_result +=  '已解锁，区域:  ' + code.toUpperCase()
         }
       })
       .catch((error) => {
-        youtube_check_result += '检测失败，请刷新面板'
+        youtube_check_result +=  '检测失败，请刷新面板'
       })
   
     return youtube_check_result
