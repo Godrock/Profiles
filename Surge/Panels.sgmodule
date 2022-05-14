@@ -34,8 +34,8 @@ DisneyController = script-name=DisneyController, update-interval=600
 #网络信息 = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/ipcheck.js
 # > 机场信息
 # > 必须修改的字段:你encode后的机场订阅链接
-//Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mianly/Surge_Private/main/sub_info.js ,script-update-interval=0,argument=url=https%3A%2F%2Fapi.nxtlnodes.com%2FSubscription%2FSurgeNodeList%3Fsid%3D22153%26token%3Dqzvu2NVKPZc&reset_day=10&title=AmyTelecom&icon=opticaldisc&color=#5AC8FA
-//Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=https%3A%2F%2Fsemitelecom.net%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D35254405629d89b0353c04b2ad91da44&reset_day=10&title=DH-DNS&icon=opticaldisc&color=#5AC8FA
+//Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mianly/Surge_Private/main/sub_info.js ,script-update-interval=0,argument=url=[URL encode 后机场节点链接]&reset_day=10&title=AmyTelecom&icon=opticaldisc&color=#5AC8FA
+//Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=[URL encode 后机场节点链接]&reset_day=10&title=DH-DNS&icon=opticaldisc&color=#5AC8FA
 # > Netflix策略组控制
 # > 应该修改的字段 netflixGroup
 NetflixController = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixcontroller.js, timeout=3600, argument=icon1=play.circle&color1=00BC12&icon2=checkmark.circle.trianglebadge.exclamationmark&color2=#9a9ced&icon3=hand.raised.circle&color3=#ea5532&netflixGroup=Netflix
