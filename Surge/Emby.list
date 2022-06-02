@@ -21,4 +21,7 @@ DOMAIN,emby.misakaf.xyz
 
 # > 流媒体Froghub服务器
 DOMAIN,178.173.230.58
+DOMAIN,emby.hm773.xyz
 
+# > 流媒体NakoNako服务器
+DOMAIN,nakonako.net
