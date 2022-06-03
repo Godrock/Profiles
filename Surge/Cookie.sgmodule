@@ -1,11 +1,13 @@
 #!name=重写获取
-#!desc=Update-2022.4.28
+#!desc=Update-2022.6.3
 #!system=ios
 
 [Script]
 #Safari浏览器打开登录 https://home.m.jd.com/myJd/newhome.action 点击"我的"页面或者使用旧版网址 https://bean.m.jd.com/bean/signIndex.action 点击签到并且出现签到日历如果通知获取Cookie成功, 则可以使用此签到脚本. 注: 请勿在京东APP内获取!!!获取京东金融签到Body说明: 正确添加脚本配置后, 进入"京东金融"APP, 在"首页"点击"签到"并签到一次, 待通知提示成功即可
 # > 获取京东Cookie
 获取京东Cookie = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+# > 京东获取wskey boxjs订阅https://raw.githubusercontent.com/chiupam/surge/main/boxjs/chiupam.boxjs.json
+京东获取wskey = type=http-request, pattern=^https:\/\/api\-dd\.jd\.com\/client\.action\?functionId=getSessionLog, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/chiupam/surge/main/scripts/javascripts/wskey.js
 # > 小米运动 app登陆时获取
 小米运动 = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js
 # > 什么值得买 浏览器 https://zhiyou.smzdm.com/
@@ -38,4 +40,4 @@
 奇艺获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/info\.action,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 [MITM]
-hostname = %APPEND% ms.jr.jd.com, me-api.jd.com, api.m.jd.com, account.huami.com, h5.ele.me, i.meituan.com, music.163.com, *.bilibili.com, *.ximalaya.com, m.weibo.cn, apph5.manmanbuy.com, zhiyou.smzdm.com, passport.iqiyi.com, c.tieba.baidu.com, *.m.163.com, api.wfdata.club, my.ruanmei.com, 
+hostname = %APPEND% ms.jr.jd.com, me-api.jd.com, api.m.jd.com, api-dd.jd.com, account.huami.com, h5.ele.me, i.meituan.com, music.163.com, *.bilibili.com, *.ximalaya.com, m.weibo.cn, apph5.manmanbuy.com, zhiyou.smzdm.com, passport.iqiyi.com, c.tieba.baidu.com, *.m.163.com, api.wfdata.club, my.ruanmei.com, 
