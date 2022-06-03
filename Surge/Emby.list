@@ -1,10 +1,3 @@
-# > 流媒体卷毛鼠服务器
-DOMAIN,cf.jmsooo.com
-DOMAIN,sg1.jmsooo.com
-DOMAIN,sg2.jmsooo.com
-DOMAIN,usa1.jmsooo.com
-DOMAIN,usa2.jmsooo.com
-
 # > 流媒体Odyssey+服务器
 DOMAIN,cf.odysseyplus.site
 DOMAIN,sg.odysseyplus.site
@@ -13,11 +6,16 @@ DOMAIN,ru.odysseyplus.site
 DOMAIN,us.odysseyplus.site
 DOMAIN,kr.odysseyplus.site
 
+# > 流媒体卷毛鼠服务器
+DOMAIN,cf.jmsooo.com
+DOMAIN,ha.jmsooo.com
+
 # > 流媒体CharonTV服务器
 DOMAIN,play.charontv.com
 
 # > 流媒体MisakaF服务器
 DOMAIN,emby.misakaf.xyz
+DOMAIN,embyaz.misakaf.xyz
 
 # > 流媒体Froghub服务器
 DOMAIN,178.173.230.58
@@ -25,3 +23,6 @@ DOMAIN,emby.hm773.xyz
 
 # > 流媒体NakoNako服务器
 DOMAIN,nakonako.net
+
+# > 流媒体Singularity服务器
+DOMAIN,singularity.deja-vu.beauty
