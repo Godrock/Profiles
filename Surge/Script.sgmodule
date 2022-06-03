@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=Update-2022.5.25
+#!desc=Update-2022.6.3
 #!system=ios
 
 [General]
@@ -117,6 +117,7 @@ grow解锁 = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-
 //空气质量 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Weather.sgmodule
 //百度知乎换UA https://raw.githubusercontent.com/zZPiglet/Task/master/ChangeUA.sgmodule
 //京东联盟转链 https://raw.githubusercontent.com/githubdulong/Script/master/Surge/jdapp_to_union.sgmodule
+//JD's wskey https://raw.githubusercontent.com/chiupam/surge/main/Surge/JD_wskey.sgmodule
 //京东半自动销卡 https://raw.githubusercontent.com/asnfohsdgfbkxcv/script/main/surge/Jd_unbindCard.sgmodule
 //Dualsub https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Dualsub.sgmodule
 //去广告 For iOS https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/Advertising.sgmodule
