@@ -6,5 +6,9 @@
 compatibility-mode = 3
 force-http-engine-hosts = %APPEND% *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m, *n, *o, *p, *q, *r, *s, *t, *u, *v, *w, *x, *y, *z
 
+[Rule]
+# 适应bilibili去广告与兼容模式冲突
+IP-CIDR,203.107.1.1/24,REJECT,no-resolve
+
 [MITM]
 tcp-connection = true
