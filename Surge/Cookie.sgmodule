@@ -1,5 +1,5 @@
 #!name=重写获取
-#!desc=Update-2022.6.3
+#!desc=Update-2022.6.18
 #!system=ios
 
 [Script]
@@ -38,6 +38,8 @@
 威锋论坛 = type=http-request,pattern=^https?:\/\/api.wfdata.club\/v1\/auth\/signin,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js,requires-body=true
 # > 爱奇艺 登陆 https://m.iqiyi.com/user.html
 奇艺获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/info\.action,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+# > 吾爱破解 登陆 https://www.52pojie.cn/home.php
+吾爱获取 = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 
 [MITM]
-hostname = %APPEND% ms.jr.jd.com, me-api.jd.com, api.m.jd.com, api-dd.jd.com, account.huami.com, h5.ele.me, i.meituan.com, music.163.com, *.bilibili.com, *.ximalaya.com, m.weibo.cn, apph5.manmanbuy.com, zhiyou.smzdm.com, passport.iqiyi.com, c.tieba.baidu.com, *.m.163.com, api.wfdata.club, my.ruanmei.com, 
+hostname = %APPEND% ms.jr.jd.com, me-api.jd.com, api.m.jd.com, api-dd.jd.com, account.huami.com, h5.ele.me, i.meituan.com, music.163.com, *.bilibili.com, *.ximalaya.com, m.weibo.cn, apph5.manmanbuy.com, zhiyou.smzdm.com, passport.iqiyi.com, c.tieba.baidu.com, *.m.163.com, api.wfdata.club, my.ruanmei.com, www.52pojie.cn
