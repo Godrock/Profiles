@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=Update-2022.6.24
+#!desc=Update-2022.7.1
 #!system=ios
 
 [General]
@@ -109,6 +109,8 @@ vsco解锁 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/s
 美图秀秀 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Mtxx.js,type=http-response,pattern=^https?://(api|h5).xiuxiu.meitu.com/(v1/user/show.json|v1/vip/vip_show.json|v1/vip/prompt/query.json|v1/h5/vip/sub_detail.json|v1/h5/user/self_show.json|v1/h5/vip/user_detail.json|v1/vip/prompt/query.json|v1/vip/prompt/query.json)
 # > xmind思维导图 解锁
 思维导图 = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/(devices|user_sub_status|appstore/sub),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/xmind.js,script-update-interval=0
+# > WPS解锁超级V，wpsV，稻壳V
+WPS解锁超级V = type=http-response,pattern=^https?:\/\/account\.wps\.cn\/api\/users,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,script-update-interval=0,max-size=0
 
 # > 模块订阅(单独添加)
 //兼容模式https://raw.githubusercontent.com/Godrock/Profiles/main/Surge/Module/TunOnly.sgmodule
@@ -138,4 +140,4 @@ vsco解锁 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/s
 //模块更新捷径 https://www.icloud.com/shortcuts/67c3ace4fb3a4f9ebbe8d3184cd82e39
 
 [MITM]
-hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, sub.store, duckduckgo.com, *.bilibili.com, ap?.biliapi.net, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, ap*.intsig.net, pan.baidu.com, vsco.co, boxer.baidu.com, api.polaxiong.com, lcs-mobile-cops.adobe.io, biz.caiyunapp.com, *.google.cn, *.google.com.hk, m.douban.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, *.xmind.*
+hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, sub.store, duckduckgo.com, *.bilibili.com, ap?.biliapi.net, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, ap*.intsig.net, pan.baidu.com, vsco.co, boxer.baidu.com, api.polaxiong.com, lcs-mobile-cops.adobe.io, biz.caiyunapp.com, *.google.cn, *.google.com.hk, m.douban.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, *.xmind.*, account.wps.cn,
