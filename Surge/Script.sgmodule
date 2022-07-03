@@ -1,11 +1,13 @@
 #!name=脚本合集
-#!desc=Update-2022.7.1
+#!desc=Update-2022.7.3
 #!system=ios
 
 [General]
 force-http-engine-hosts = %APPEND% boxjs.net, boxjs.com
 
 [Rule]
+# > VSCO 代理
+DOMAIN,measurement.com,Proxy
 # > 天气数据
 DOMAIN,api.waqi.info,Proxy
 # > Safari 防跳转
@@ -140,4 +142,4 @@ WPS解锁超级V = type=http-response,pattern=^https?:\/\/account\.wps\.cn\/api\
 //模块更新捷径 https://www.icloud.com/shortcuts/67c3ace4fb3a4f9ebbe8d3184cd82e39
 
 [MITM]
-hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, sub.store, duckduckgo.com, *.bilibili.com, ap?.biliapi.net, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, ap*.intsig.net, pan.baidu.com, vsco.co, boxer.baidu.com, api.polaxiong.com, lcs-mobile-cops.adobe.io, biz.caiyunapp.com, *.google.cn, *.google.com.hk, m.douban.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, *.xmind.*, account.wps.cn,
+hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, sub.store, duckduckgo.com, *.bilibili.com, ap?.biliapi.net, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, ap*.intsig.net, pan.baidu.com, vsco.co, boxer.baidu.com, api.polaxiong.com, lcs-mobile-cops.adobe.io, biz.caiyunapp.com, *.google.cn, *.google.com.hk, m.douban.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, *.xmind.*, account.wps.cn
