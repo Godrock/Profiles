@@ -21,6 +21,7 @@ DOMAIN,embyaz.misakaf.xyz
 
 # > 流媒体Froghub服务器
 DOMAIN,178.173.230.58
+DOMAIN,178.173.230.8
 
 # > 流媒体Singularity服务器
 DOMAIN,singularity.deja-vu.beauty
