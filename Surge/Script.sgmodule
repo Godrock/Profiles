@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=Update-2022.7.13
+#!desc=Update-2022.7.20
 #!system=ios
 
 [General]
@@ -74,6 +74,8 @@ DOMAIN-SUFFIX,applvn.com,REJECT
 会话数据 = type=http-request,pattern=https?:\/\/boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 # > SUB订阅管理
 订阅管理 = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120
+# > Emby 解锁
+EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Emby.js
 # > 机场信息 
 机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info.js
 # > 新浪微博 去广告
@@ -140,10 +142,10 @@ WPS解锁 = type=http-response,pattern=^https?:\/\/account\.wps\.cn\/api\/users,
 //微信链接限制 https://raw.githubusercontent.com/zZPiglet/Task/master/UnblockURLinWeChat.sgmodule
 //定位修改 按需启用 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Location.sgmodule
 //喜马拉雅去广告Surge版 https://raw.githubusercontent.com/githubdulong/Script/master/Surge/XiMaLaYa.sgmodule
-//TF测试共享（按需启用与TF下载修正冲突） https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/TestFlightAccount.sgmodule
+//TF测试共享（按需启用与TF下载修正二选一） https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/TestFlightAccount.sgmodule
 //bilibili去广告 https://github.com/yuhangrao/Surge/raw/master/Module/Bilibili/bilibili_plus.sgmodule
 //定位修改 按需启用 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Location.sgmodule
 //模块更新捷径 https://www.icloud.com/shortcuts/67c3ace4fb3a4f9ebbe8d3184cd82e39
 
 [MITM]
-hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, sub.store, duckduckgo.com, *.bilibili.com, ap?.biliapi.net, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, ap*.intsig.net, dayone.*, pan.baidu.com, bmall.camera360.com, vsco.co, boxer.baidu.com, api.polaxiong.com, lcs-mobile-cops.adobe.io, biz.caiyunapp.com, *.google.cn, *.google.com.hk, m.douban.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, *.xmind.*, account.wps.cn, 
+hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, sub.store, duckduckgo.com, *.bilibili.com, ap?.biliapi.net, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, ap*.intsig.net, dayone.*, pan.baidu.com, bmall.camera360.com, vsco.co, boxer.baidu.com, api.polaxiong.com, lcs-mobile-cops.adobe.io, biz.caiyunapp.com, *.google.cn, *.google.com.hk, m.douban.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, *.xmind.*, account.wps.cn, mb3admin.com
