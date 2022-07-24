@@ -10,12 +10,10 @@
 # > 网络详情
 //网络信息 = script-name=网络信息,title=网络信息,content=请刷新,style=info,update-interval=60
 # > 机场信息
-//Sub_info1 = script-name=Sub_info1,update-interval = 43200
-//Sub_info2 = script-name=Sub_info2,update-interval = 43200
-# > Netflix策略组自动控制
-NetflixController = script-name=NetflixController, update-interval=600
-# > Disney+策略组自动控制
-DisneyController = script-name=DisneyController, update-interval=600
+Sub_info1 = script-name=Sub_info1,update-interval = 43200
+Sub_info2 = script-name=Sub_info2,update-interval = 43200
+# > 流媒体解锁检测
+stream-all = script-name=stream-all, title="流媒体解锁检测", content="请刷新面板", update-interval=3600
 
 [Script]
 # > 功能开关
@@ -26,17 +24,7 @@ DisneyController = script-name=DisneyController, update-interval=600
 //网络信息 = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/ipcheck.js
 # > 机场信息
 # > 必须修改的字段:你encode后的机场订阅链接
-//Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Godrock/Profiles/main/JavaScript/Surge/sub_info.js ,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=20&title=你的机场&icon=paperplane.circle&color=#157EFB
-//Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Godrock/Profiles/main/JavaScript/Surge/sub_info.js ,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=10&title=你的机场&icon=paperplane.circle&color=#157EFB
-# > Netflix策略组控制
-# > 应该修改的字段 netflixGroup
-NetflixController = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixcontroller.js, timeout=3600, argument=icon1=play.circle&color1=00BC12&icon2=checkmark.circle.trianglebadge.exclamationmark&color2=#9a9ced&icon3=hand.raised.circle&color3=#ea5532&netflixGroup=Netflix
-NetflixChecker = type=cron,cronexp=10 * * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixchecker.js,script-update-interval=86400,control-api=1
-# > 捷径执行
-NetflixShortcut = type=cron,cronexp=5 * 31 1 2000,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixshortcut.js,script-update-interval=86400,control-api=1
-# > Disney+策略组控制
-# > 应该修改的字段 disneyGroup
-DisneyController = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disneycontroller.js, timeout=3600,argument=icon1=play.circle&color1=#00BC12&icon2=cursorarrow.click.badge.clock&color2=#ed6c84&icon3=xmark.shield&color3=#AF52DE&disneyGroup=Disney+
-DisneyChecker = type=cron,cronexp=13 0-23/4 * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disneychecker.js,script-update-interval=86400,control-api=1
-# > 捷径执行
-DisneyShortcut = type=cron,cronexp=5 0 31 1 2000,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disneyshortcut.js,script-update-interval=86400,control-api=1
+Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Godrock/Profiles/main/JavaScript/Surge/sub_info.js ,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=20&title=你的机场&icon=paperplane.circle&color=#157EFB
+Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Godrock/Profiles/main/JavaScript/Surge/sub_info.js ,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=10&title=你的机场&icon=paperplane.circle&color=#157EFB
+# > 流媒体解锁检测
+stream-all = type=generic, timeout=15, script-path= https://raw.githubusercontent.com/Godrock/Profiles/main/JavaScript/Surge/Stream-all.js
