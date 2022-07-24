@@ -33,5 +33,8 @@ DOMAIN,51.79.222.233
 DOMAIN,jp.blueseamusicbox.best
 DOMAIN,blueseamusics.com
 
+# > BlueSea公益服
+DOMAIN,emby-pub1.blueseacdn.com
+
 # > CC公益服
 DOMAIN,emby.jiasu.ga
