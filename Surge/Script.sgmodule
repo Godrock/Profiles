@@ -1,5 +1,5 @@
 #!name=脚本合集
-#!desc=Update-2022.7.20
+#!desc=Update-2022.7.27
 #!system=ios
 
 [General]
@@ -119,6 +119,10 @@ Grow解锁会员 = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/
 思维导图 = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/(devices|user_sub_status|appstore/sub),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/xmind.js,script-update-interval=0
 # > WPS VIP
 WPS解锁 = type=http-response,pattern=^https?:\/\/account\.wps\.cn\/api\/users,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,script-update-interval=0,max-size=0
+# > Notability 解锁
+Notability VIP = type=http-response,pattern=^https:\/\/notability\.com\/subscriptions,script-path=https://raw.githubusercontent.com/PoetryU/Scientist/master/Scripts/notabilityvip.js,requires-body=true
+# > NoMoCam 解锁
+NoMoCam = type=http-request,pattern=^https?:\/\/nomo\.dafork\.com\/api\/.+,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/NoMoCamProCrack.js,script-update-interval=0
 
 # > 模块订阅(单独添加)
 //兼容模式https://raw.githubusercontent.com/Godrock/Profiles/main/Surge/Module/TunOnly.sgmodule
@@ -148,4 +152,4 @@ WPS解锁 = type=http-response,pattern=^https?:\/\/account\.wps\.cn\/api\/users,
 //模块更新捷径 https://www.icloud.com/shortcuts/67c3ace4fb3a4f9ebbe8d3184cd82e39
 
 [MITM]
-hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, sub.store, duckduckgo.com, *.bilibili.com, ap?.biliapi.net, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, ap*.intsig.net, dayone.*, pan.baidu.com, bmall.camera360.com, vsco.co, boxer.baidu.com, api.polaxiong.com, lcs-mobile-cops.adobe.io, biz.caiyunapp.com, *.google.cn, *.google.com.hk, m.douban.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, *.xmind.*, account.wps.cn, mb3admin.com
+hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, api.m.jd.com, sub.store, duckduckgo.com, *.bilibili.com, ap?.biliapi.net, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, ap*.intsig.net, dayone.*, pan.baidu.com, bmall.camera360.com, vsco.co, boxer.baidu.com, api.polaxiong.com, lcs-mobile-cops.adobe.io, biz.caiyunapp.com, *.google.cn, *.google.com.hk, m.douban.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, *.xmind.*, account.wps.cn, mb3admin.com, *notability.com, nomo.dafork.com
